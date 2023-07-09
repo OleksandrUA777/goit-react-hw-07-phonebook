@@ -35,13 +35,13 @@ export const contactsSlice = createSlice({
       state.error = null;
 
       const namesArr = state.items.map(item => item.name);
-      const name = action.payload;
+      const name = action.payload.name;
 
       if (namesArr.includes(name)) {
         alert(`${name} is already in your contacts`);
         return;
       }
-      state.items.push(action.meta.arg);
+      state.items.push(action.payload);
 
       // console.log(current(state.items)); // правильні items
       // console.log(state.items); //undefined
@@ -55,7 +55,7 @@ export const contactsSlice = createSlice({
       state.isLoading = true;
     },
     [deleteContactThunk.fulfilled]: (state, action) => {
-      const id = action.meta.arg;
+      const id = action.payload.id;
       const filteredArr = state.items.filter(item => item.id !== id);
 
       state.isLoading = false;
