@@ -15,6 +15,7 @@ export const fetchContacts = async () => {
 };
 export const addContact = async contact => {
   const resp = await axios.post(`/contacts`, contact);
+  return resp.data;
 };
 
 export const deleteContact = async id => {

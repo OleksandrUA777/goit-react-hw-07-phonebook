@@ -35,7 +35,7 @@ export const contactsSlice = createSlice({
       state.error = null;
 
       const namesArr = state.items.map(item => item.name);
-      const name = action.meta.arg.name;
+      const name = action.payload;
 
       if (namesArr.includes(name)) {
         alert(`${name} is already in your contacts`);
