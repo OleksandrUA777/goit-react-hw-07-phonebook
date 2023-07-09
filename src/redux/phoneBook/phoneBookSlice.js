@@ -1,4 +1,4 @@
-import { createSlice, current } from '@reduxjs/toolkit';
+import { createSlice } from '@reduxjs/toolkit';
 import {
   addContactThunk,
   deleteContactThunk,
@@ -82,17 +82,3 @@ export const filterSlice = createSlice({
   },
 });
 export const { filterUpdate } = filterSlice.actions;
-// reducers: {
-//   addContacts(state, action) {
-//     const listOfNames = state.map(({ name }) => name.toUpperCase());
-//     const { name } = action.payload;
-
-//     if (listOfNames.includes(name.toUpperCase())) {
-//       return alert(`${name} is already in contacs.`);
-//     }
-//     state.push(action.payload);
-//   },
-//   removeContacts(state, action) {
-//     return state.filter(contact => contact.id !== action.payload);
-//   },
-// },

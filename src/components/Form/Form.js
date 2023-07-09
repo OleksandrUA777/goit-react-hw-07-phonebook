@@ -1,7 +1,6 @@
 import { useState } from 'react';
 import { useDispatch } from 'react-redux';
 import { nanoid } from '@reduxjs/toolkit';
-import { addContacts } from 'redux/phoneBook/phoneBookSlice';
 import { addContactThunk } from 'redux/phoneBook/thunk';
 
 export const Form = () => {

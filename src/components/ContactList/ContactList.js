@@ -1,6 +1,4 @@
-import propTypes from 'prop-types';
 import { useDispatch, useSelector } from 'react-redux';
-import { removeContacts } from 'redux/phoneBook/phoneBookSlice';
 import { deleteContactThunk } from 'redux/phoneBook/thunk';
 
 export const ContactList = () => {
